@@ -8,6 +8,7 @@ print("============================================")
 
 username ="informatika"
 password ="12345678"
+#fungsi login
 def login (user_name,pass_word):
     if user_name != username or pass_word != password:
         print("Username atau Password salah coba lagi!")
@@ -17,6 +18,7 @@ def login (user_name,pass_word):
         print("=========== ~~ LOGIN BERHASIL ~~ ===========")
         exit()
 
+#syarat login
 for i in range (0,3):
     username_=input("Username Anda : ")
     password_=input("Password Anda : ")
