@@ -12,18 +12,22 @@ class AkunBank:
 
     #contstructor
     def __init__(self, no_pelanggan, nama_pelanggan, jumlah_saldo):
+        #atribut private
         self.__no_pelanggan = no_pelanggan
         self.__nama_pelanggan = nama_pelanggan
         self.__jumlah_saldo = jumlah_saldo
-        self.list_pelanggan.append(self)
+        self.list_pelanggan.append(self) 
     
+    #fungsi lihat_menu
     def lihat_menu(self):
         print(f"Halo {Akun1.__nama_pelanggan}, ingin melakukan apa?")
         print(" 1. Cek Saldo \n 2. Tarik Tunai \n 3. Transfer Saldo \n 4. Keluar \n")
     
+    #fungsi lihat_saldo
     def lihat_saldo(self):
         print(f"\n{Akun1.__nama_pelanggan}, memiliki saldo Rp {Akun1.__jumlah_saldo}\n")
 
+    #fungsi tarik_tunai
     def tarik_tunai(self, jmlh_tarik):
         if jmlh_tarik > Akun1.__jumlah_saldo:
             print("Nominal saldo yang Anda punya tidak cukup!\n")
@@ -32,6 +36,7 @@ class AkunBank:
             print("Saldo berhasil ditarik!")
             print(f"Sisa saldo anda Rp {Akun1.__jumlah_saldo}\n")
     
+    #fungsi transfer
     def transfer(self, nominal_transaksi, no_pelanggan):
         if nominal_transaksi < self.__jumlah_saldo: 
             for pelanggan in self.list_pelanggan:
@@ -45,7 +50,8 @@ class AkunBank:
         else:
             print("Saldo anda tidak mencukupi untuk melakukan transfer! Kembali Ke Menu Utama...\n")
 
-Akun1 = AkunBank(1234, "Khairani", 5000000000)
+#objek
+Akun1 = AkunBank(1234, "Khairani", 5000000000) 
 Akun2 = AkunBank(2345, "Ukraina", 6666666666)
 Akun3 = AkunBank(3456, "Elon Musk", 9999999999)
 
@@ -55,14 +61,15 @@ while Ulang:
     Akun1.lihat_menu()
     akses_aktivitas_akun = (input("Masukkan nomor input : "))
     
+    #pilihan lihat_saldo
     if akses_aktivitas_akun == '1':
         Akun1.lihat_saldo()
-    elif akses_aktivitas_akun == '2':
+    elif akses_aktivitas_akun == '2': #pilihan tarik tunai
         jmlh_tarik = int(input("\nMasukkan jumlah nominal yang akan ditarik : "))
         Akun1.tarik_tunai(jmlh_tarik)
-    elif akses_aktivitas_akun == '3':
+    elif akses_aktivitas_akun == '3': #pilihan transfer
         nominal_transaksi_input = int(input("\nMasukkan jumlah nominal yang akan di transfer : "))
         no_pelanggan_input = input("Masukkan no rekening yang dituju : ")
         Akun1.transfer(nominal_transaksi_input, no_pelanggan_input)
-    elif akses_aktivitas_akun == '4':
+    elif akses_aktivitas_akun == '4': #pilihan keluar
         Ulangi = False
