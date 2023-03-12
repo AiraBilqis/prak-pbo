@@ -22,7 +22,7 @@ class AkunBank:
         print(" 1. Cek Saldo \n 2. Tarik Tunai \n 3. Transfer Saldo \n 4. Keluar \n")
     
     def lihat_saldo(self):
-        print(f"\n{Akun1.__nama_pelanggan}, memiliki saldo Rp {Akun1.__jumlah_saldo},\n")
+        print(f"\n{Akun1.__nama_pelanggan}, memiliki saldo Rp {Akun1.__jumlah_saldo}\n")
 
     def tarik_tunai(self, jmlh_tarik):
         if jmlh_tarik > Akun1.__jumlah_saldo:
@@ -30,7 +30,7 @@ class AkunBank:
         else:
             Akun1.__jumlah_saldo = Akun1.__jumlah_saldo - jmlh_tarik
             print("Saldo berhasil ditarik!")
-            print(f"Sisa saldo anda Rp {Akun1.__jumlah_saldo},\n")
+            print(f"Sisa saldo anda Rp {Akun1.__jumlah_saldo}\n")
     
     def transfer(self, nominal_transaksi, no_pelanggan):
         if nominal_transaksi < self.__jumlah_saldo: 
