@@ -29,20 +29,20 @@ class Robot:
             if (Robot.jumlah_turn % 2) == 0:
                 self.health += 4000 #to be changed 
                 Robot.terima_aksi(other, self.damage)
-                return f"Alphasetia mendapatkan health tambahan sebesar 4000\n" #to be changed 
+                return f"Alphasetia mendapatkan health tambahan sebesar 4000 HP\n" #to be changed 
             else:
                 Robot.terima_aksi(other, self.damage)
-                return f"Alphasetia mendapatkan health tambahan sebesar 4000\n"
+                return f"Alphasetia mendapatkan health tambahan sebesar 4000 HP\n"
         elif self.nama == "Lecalicus":
             if (Robot.jumlah_turn % 4) == 0:
                 self.damage = self.damage * 2 
                 self.health += 7000
                 Robot.terima_aksi(other, self.damage)
                 self.damage = 5500
-                return f"Lecalicus mendapatkan health tambahan sebesar 7000\n"
+                return f"Lecalicus mendapatkan health tambahan sebesar 7000 HP\n"
             else:
                 Robot.terima_aksi(other, self.damage)
-                return f"Lecalicus mendapatkan health tambahan sebesar 7000\n"
+                return f"Lecalicus mendapatkan health tambahan sebesar 7000 HP\n"
                 
     def terima_aksi(self, damage):
         if damage > self.health:
