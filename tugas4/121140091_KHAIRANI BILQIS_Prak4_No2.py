@@ -47,12 +47,12 @@ class Robot:
     def terima_aksi(self, damage):
         if damage > self.health:
             self.health=0
-            print(f"{self.nama} telah menerima damage sebesar {damage} poin, sisa health : {self.health}")
+            print(f"{self.nama} telah menerima damage sebesar {damage} DMG, sisa health : {self.health} HP")
             print(f"{self.nama} telah mati secara terhormat!")
             Robot.alive = False 
         else:
             self.health += damage
-            print(f"{self.nama} telah menerima damage sebesar {damage} poin dengan sisa health sebesar {self.health}")
+            print(f"{self.nama} telah menerima damage sebesar {damage} DMG dengan sisa health sebesar {self.health} HP")
     
 class Antares(Robot):
     def __init__(self):
