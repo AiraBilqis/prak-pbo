@@ -55,8 +55,8 @@ def showimage():
                                                                                    ("All files", "*.txt")))
     
     img = (Image.open(filename))
-    resized_image = img.resize((197, 197))
-    photo2 = ImageTk.PhotoImage(resized_image)
+    resize_image = img.resize((197, 197))
+    photo2 = ImageTk.PhotoImage(resize_image)
     lbl.config(image = photo2)
     lbl.image = photo2
 
@@ -91,7 +91,7 @@ def Clear():
     
     saveButton.config(state = 'normal')
     
-    img1 = PhotoImage(file = 'Student_Images/Upload Photo1.png')
+    img1 = PhotoImage(file = "Student_Images/Upload Photo1.png")
     lbl.config(image = img1)
     lbl.image = img1
     
@@ -207,8 +207,8 @@ def search():
     Mother_Occupation.set(x12)
     
     img = (Image.open("Student Images/" + str(x1) + ".jpg")) #We done this to take image name same as registration no.
-    resized_image = img.resize((197, 197))
-    photo2 = ImageTk.PhotoImage(resized_image)
+    resize_image = img.resize((197, 197))
+    photo2 = ImageTk.PhotoImage(resize_image)
     lbl.config(image = photo2)
     lbl.image = photo2
     
@@ -374,7 +374,7 @@ MO_entry = Entry(obj2, textvariable = Mother_Occupation, width = 30, font = "ari
 MO_entry.place(x = 580, y = 93)
 
 #Image
-f = Frame(root, bd = 2, bg = "black", width = 207, height = 207, relief = GROOVE)
+f = Frame(root, bd = 3, bg = "black", width = 207, height = 207, relief = GROOVE)
 f.place(x = 950, y = 150)
 
 img = PhotoImage(file = "Student_Images/Upload Photo1.png") 
