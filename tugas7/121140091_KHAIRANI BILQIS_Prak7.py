@@ -91,7 +91,7 @@ def Clear():
     
     saveButton.config(state = 'normal')
     
-    img1 = PhotoImage(file = 'Student_Images/Upload Photo.png')
+    img1 = PhotoImage(file = 'Student_Images/Upload Photo1.png')
     lbl.config(image = img1)
     lbl.image = img1
     
